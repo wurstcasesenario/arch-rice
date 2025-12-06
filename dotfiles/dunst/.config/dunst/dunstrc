@@ -1,0 +1,18 @@
+[global]
+    geometry = "300x50-10+10"
+    font = Monospace 10
+    time = 5000
+    transparency = 10
+    frame_width = 2
+
+[urgency_low]
+    background = "#282828"
+    foreground = "#ebdbb2"
+
+[urgency_normal]
+    background = "#282828"
+    foreground = "#ebdbb2"
+
+[urgency_critical]
+    background = "#fb4934"
+    foreground = "#282828"
