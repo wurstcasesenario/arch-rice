@@ -6,8 +6,7 @@ cd ~/arch-rice/dotfiles
 
 stow -v bash
 
-stow -v hyprland
-stow -v  waybar
-stow -v kitty
-stow -v dunst
-stow -v rofi
+stow -t ~ -v hypr
+stow -t ~ -v  waybar
+stow -t ~ -v kitty
+#stow -t ~ -v wofi

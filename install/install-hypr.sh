@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-echo "=== Installing Hyperlanf & WM tools ==="
+echo "=== Installing Hyperland & WM tools ==="
 
-sudo pacman -S --noconfirm hyprland waybar rofi kitty dunst seatd
-sudo systectl enable --now seatd
-sudo usermod -aG seat $USER
+sudo pacman -S --noconfirm hyprland waybar wofi kitty swww \
+hypridle hyprlock grim slurp swaync nautilus
