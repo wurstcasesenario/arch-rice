@@ -3,14 +3,18 @@
 echo "=== Updating System ==="
 sudo pacman -Syu --noconfirm
 
+INSTALL_PATH="$HOME/arch-rice/install"
 
-./install/install-stow.sh
-./install/install-network.sh
-./install/install-hypr.sh
-./install/install-fonts.sh
-./install/install-tools.sh
-./install/install-audio.sh
-./install/install-polkit.sh
-./install/install-applications.sh
+cd "$INSTALL_PATH" || exit 1
 
-./install/install-dotfiles.sh
+./install-stow.sh
+./install-tools.sh
+./install-fonts.sh
+./install-network.sh
+./install-hypr.sh
+./install-nautilus.sh
+./install-audio.sh
+./install-polkit.sh
+./install-applications.sh
+
+./install-dotfiles.sh

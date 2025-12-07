@@ -2,4 +2,4 @@
 
 echo "=== Installing Applications ==="
 
-sudo pacman -S --noconfirm firefox
+sudo pacman -S --noconfirm firefox nautilus

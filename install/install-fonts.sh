@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 
 echo "=== Installing Fonts ==="
-sudo pacman -S --noconfirm ttf-liberation noto-fonts ttf-jetbrains-mono
+
+sudo pacman -S --noconfirm noto-fonts noto-fonts-emoji 
+
+
+# Awesome font for Waybar Ions
+sudo pacman -S --noconfirm otf-font-awesome
