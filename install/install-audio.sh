@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-echo "=== Installing Utilities ==="
-sudo pacman -S --noconfirm pipewire-alsa pipewire pipewire-pulse wireplumber pipewire-jack
+echo "=== Installing Audio Utilities ==="
+sudo pacman -S --noconfirm pipewire-alsa pipewire pipewire-pulse wireplumber jack2 \
+ pavucontrol
+
 
 
 systemctl --user enable --now pipewire

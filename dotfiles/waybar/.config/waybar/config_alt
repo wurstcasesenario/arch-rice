@@ -17,13 +17,14 @@
         "idle_inhibitor",
         "pulseaudio",
         "network",
+	"bluetooth",
         "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
         "backlight",
         "keyboard-state",
-        "sway/language",
+        "hyprland/language",
         "battery",
         "battery#bat2",
         "clock",
@@ -93,6 +94,14 @@
             "activated": "",
             "deactivated": ""
         }
+    },
+    "bluetooth": {
+        "format": "  {status}",
+        "format-disabled": " off",
+        "format-connected": "  {device_alias}",
+        "tooltip": true,
+        "on-click": "blueman-manager",  
+        "on-click-right": "rfkill toggle bluetooth"
     },
     "tray": {
         // "icon-size": 21,

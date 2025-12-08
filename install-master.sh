@@ -15,6 +15,7 @@ cd "$INSTALL_PATH" || exit 1
 ./install-nautilus.sh
 ./install-audio.sh
 ./install-polkit.sh
+./install-terminal.sh
 ./install-applications.sh
 
 ./install-dotfiles.sh
