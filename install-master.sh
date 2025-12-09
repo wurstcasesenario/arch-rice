@@ -12,10 +12,17 @@ cd "$INSTALL_PATH" || exit 1
 ./install-fonts.sh
 ./install-network.sh
 ./install-hypr.sh
+./install-themeTools.sh
 ./install-nautilus.sh
 ./install-audio.sh
 ./install-polkit.sh
 ./install-terminal.sh
 ./install-applications.sh
+./install-discord.sh
+./install-vscode.sh
+./install-steam.sh
+./install-kolour.sh
 
 ./install-dotfiles.sh
+
+./install-systemd.sh
