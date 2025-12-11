@@ -2,9 +2,11 @@
 set -e
 echo "=== Installing Steam & Gamescope & Proton GE ==="
 
-sudo pacman -S --noconfirm steam
+sudo pacman -Syu --noconfirm  vulkan-intel lib32-vulkan-intel
 
-sudo pacman -S --noconfirm gamescope
+sudo pacman -Syu --noconfirm steam
+
+sudo pacman -Syu --noconfirm gamescope
 
 mkdir -p ~/.steam/root/compatibilitytools.d
 

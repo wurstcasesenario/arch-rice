@@ -8,6 +8,7 @@
     "height": 50,
     "modules-left": [
         "custom/swaync",
+        "tray",
         "clock",
         "hyprland/workspaces"
     ],

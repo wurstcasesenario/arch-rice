@@ -44,22 +44,22 @@ tooltip {
     background-color: #000;
 }
 
+
+#workspaces button.active:only-child {
+    background-color: transparent;
+}
+
 #workspaces button.focused {
-    color: #a6adc8;
     background: #eba0ac;
-    border-radius: 10px;
 }
 
 #workspaces button.urgent {
     color: #11111b;
     background: #a6e3a1;
-    border-radius: 10px;
 }
 
 #workspaces button:hover {
     background: #11111b;
-    color: #11111b;
-    border-radius: 5px;
 }
 
 #custom-swaync,
@@ -113,8 +113,7 @@ tooltip {
 }
 
 #tray {
-    border-radius: 10px;
-    margin-right: 10px;
+    border-radius: 0px 10px 10px 0px;
 }
 
 #workspaces {
@@ -126,7 +125,7 @@ tooltip {
 
 #custom-swaync {
     color: #e1f7d5;
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
     margin-left: 10px;
 }
 

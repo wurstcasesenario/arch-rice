@@ -23,6 +23,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ff='fastfetch'
 alias ffd='fastfetch --config default'
-
+alias off='systemctl poweroff'
+alias reboot='systemctl reboot'
 
 PS1='[\u@\h \W]\$ '
