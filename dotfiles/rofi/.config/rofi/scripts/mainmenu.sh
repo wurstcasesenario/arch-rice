@@ -4,10 +4,13 @@ options=(
   "Power Menu"
   "Bluetooth"
   "WiFi"
+  "Wallpaper"
 )
 
-# Rofi anzeigen
+# Show Rofi
 choice=$(printf '%s\n' "${options[@]}" | rofi -dmenu -p "Main Menu")
+
+[ -z "$choice" ] && exit 0
 
 case "$choice" in
     "Power Menu")
@@ -18,5 +21,8 @@ case "$choice" in
         ;;
     "WiFi")
         ~/.config/rofi/scripts/wifimenu.sh
+        ;;
+    "Wallpaper")
+        ~/.config/rofi/scripts/wallpapermenu.sh
         ;;
 esac

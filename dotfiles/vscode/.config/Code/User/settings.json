@@ -1,5 +1,8 @@
 {
     "telemetry.feedback.enabled": false,
     "editor.fontFamily": "'Cascadia Mono Nerd Font', 'monospace', monospace",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "projectManager.git.baseFolders": [
+        "~/Coding"
+    ]
 }

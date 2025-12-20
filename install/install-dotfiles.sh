@@ -16,3 +16,4 @@ stow -t ~ -v starship
 stow -t ~ -v rofi
 stow -t ~ -v fastfetch
 stow -t ~ -v vscode
+stow -t ~ -v swaync

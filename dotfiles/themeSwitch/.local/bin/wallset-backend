@@ -1,19 +1,20 @@
 #!/bin/bash
 
-if [ "$#" -ne 1 ]; then
-    echo "Use: $0 path_to_image"
+WALLPAPER="$1"
+LINK="$HOME/.config/wallpaper/current"
+
+if [ -z "$WALLPAPER" ]; then
+    echo "Usage: wallset-backend.sh image"
     exit 1
 fi
 
-IMAGE="$1"
+ln -sf "$(realpath "$WALLPAPER")" "$LINK"
 
-notify-send "Changing Theme" "Applying new Theme, Please wait..."
-
-swww img "$IMAGE" --transition-type="center" --transition-step=1 --transition-fps="60"
-
-wal -i "$IMAGE" -n -s -t -e
+swww img "$LINK" --transition-type="wipe" --transition-step=1 --transition-fps="60"
 
 pkill waybar
 waybar &
+
+pkill -USR1 hyprlock 2>/dev/null
 
 notify-send "Theme Changed" "Applyed new Theme"
