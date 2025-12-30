@@ -10,6 +10,14 @@ if [ -d "$HOME/.local/bin" ]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "$HOME/.cargo/bin" ]; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+# Add ESPUP Rustc
+if [ -d "$HOME/.rustup/toolchains/esp/bin" ]; then
+    export PATH="$HOME/.rustup/toolchains/esp/bin:$PATH"
+fi
 
 # Rust / Cargo
 if [ -f "$HOME/.cargo/env" ]; then

@@ -5,6 +5,7 @@ options=(
   "Bluetooth"
   "WiFi"
   "Wallpaper"
+  "WebApp"
 )
 
 # Show Rofi
@@ -24,5 +25,8 @@ case "$choice" in
         ;;
     "Wallpaper")
         ~/.config/rofi/scripts/wallpapermenu.sh
+        ;;
+    "WebApp")
+        ~/.config/rofi/scripts/webappmenu.sh
         ;;
 esac

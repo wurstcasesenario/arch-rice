@@ -4,5 +4,7 @@
     "explorer.confirmDelete": false,
     "projectManager.git.baseFolders": [
         "~/Coding"
-    ]
+    ],
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.iconTheme": "material-icon-theme"
 }

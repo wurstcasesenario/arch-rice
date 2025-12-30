@@ -13,7 +13,8 @@ cd "$INSTALL_PATH" || exit 1
 ./install-network.sh
 ./install-hypr.sh
 ./install-themeTools.sh
-./install-nautilus.sh
+./install-qt.sh
+./install-fileManager.sh
 ./install-audio.sh
 ./install-polkit.sh
 ./install-terminal.sh
@@ -21,7 +22,7 @@ cd "$INSTALL_PATH" || exit 1
 ./install-discord.sh
 ./install-vscode.sh
 ./install-steam.sh
-./install-kolour.sh
+./install-browser.sh
 
 ./install-dotfiles.sh
 

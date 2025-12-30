@@ -2,4 +2,4 @@
 
 echo "=== Installing Applications ==="
 
-sudo pacman -S --noconfirm firefox nautilus
+sudo pacman -S --noconfirm firefox chromium bitwarden thunderbird spotify-launcher
