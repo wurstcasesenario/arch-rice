@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 options=(
   "Power Menu"
   "Bluetooth"
   "WiFi"
   "Wallpaper"
   "WebApp"
+  "Themes"
 )
 
 # Show Rofi
@@ -29,4 +32,8 @@ case "$choice" in
     "WebApp")
         ~/.config/rofi/scripts/webappmenu.sh
         ;;
+    "Themes")
+        ~/.config/rofi/scripts/thememenu.sh
+        ;;
+
 esac

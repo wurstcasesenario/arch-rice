@@ -12,7 +12,6 @@ cd "$INSTALL_PATH" || exit 1
 ./install-fonts.sh
 ./install-network.sh
 ./install-hypr.sh
-./install-themeTools.sh
 ./install-qt.sh
 ./install-fileManager.sh
 ./install-audio.sh
@@ -23,6 +22,7 @@ cd "$INSTALL_PATH" || exit 1
 ./install-vscode.sh
 ./install-steam.sh
 ./install-browser.sh
+./install-rofi.sh
 
 ./install-dotfiles.sh
 

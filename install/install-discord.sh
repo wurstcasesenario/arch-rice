@@ -2,7 +2,7 @@
 
 echo "=== Installing Discord & Vencord ==="
 
-packages=("discord" "vencord-bin")
+packages=("vencord-bin")
 
 for pkg in "${packages[@]}"; do
     if yay -Qi "$pkg" &>/dev/null; then
