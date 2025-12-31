@@ -25,7 +25,7 @@ ln -s "$THEME_DIR" "$CURRENT_LINK"
 WALLPAPER=$(find "$THEME_DIR" -maxdepth 1 -type f \( -iname "wallpaper.*" -o -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.bmp" \) | head -n 1)
 
 if [ -n "$WALLPAPER" ]; then
-    swww img "$WALLPAPER" --transition-fade
+    swww img "$WALLPAPER"
 else
     echo "No wallpaper found in $THEME_DIR"
 fi
