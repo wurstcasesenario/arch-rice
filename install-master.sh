@@ -7,6 +7,8 @@ INSTALL_PATH="$HOME/arch-rice/install"
 
 cd "$INSTALL_PATH" || exit 1
 
+./install-bash.sh
+
 ./install-stow.sh
 ./install-tools.sh
 ./install-fonts.sh
@@ -25,5 +27,3 @@ cd "$INSTALL_PATH" || exit 1
 ./install-rofi.sh
 
 ./install-dotfiles.sh
-
-./install-systemd.sh

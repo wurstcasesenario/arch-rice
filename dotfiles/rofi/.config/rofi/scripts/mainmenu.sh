@@ -6,7 +6,6 @@ options=(
   "Power Menu"
   "Bluetooth"
   "WiFi"
-  "Wallpaper"
   "WebApp"
   "Themes"
 )
@@ -25,9 +24,6 @@ case "$choice" in
         ;;
     "WiFi")
         ~/.config/rofi/scripts/wifimenu.sh
-        ;;
-    "Wallpaper")
-        ~/.config/rofi/scripts/wallpapermenu.sh
         ;;
     "WebApp")
         ~/.config/rofi/scripts/webappmenu.sh

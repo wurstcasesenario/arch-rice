@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
+
 echo "=== Installing Steam & Gamescope & Proton GE ==="
 
 sudo pacman -Syu --noconfirm  vulkan-intel lib32-vulkan-intel
@@ -15,9 +16,10 @@ LATEST=$(curl -s https://api.github.com/repos/GloriousEggroll/proton-ge-custom/r
     | grep tar.gz \
     | cut -d '"' -f 4)
 
-curl -L "$LATEST" -o proton-ge.tar.gz
+TMP_FILE=$(mktemp --suffix=.tar.gz)
 
-tar -xf proton-ge.tar.gz -C ~/.steam/steam/compatibilitytools.d
+trap rm -f "$TMP_FILE"' EXIT
 
-rm proton-ge.tar.gz
+curl -L "$LATEST" -o "$TMP_FILE"
 
+tar -xf "$TMP_FILE" -C ~/.steam/steam/compatibilitytools.d

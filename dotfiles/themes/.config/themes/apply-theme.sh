@@ -19,14 +19,19 @@ if [ -L "$CURRENT_LINK" ] || [ -e "$CURRENT_LINK" ]; then
     rm -rf "$CURRENT_LINK"
 fi
 
-# Create new Symlink
 ln -s "$THEME_DIR" "$CURRENT_LINK"
 
-# swww img "$THEME_DIR/wallpaper.jpg" --transition-fade
 
+WALLPAPER=$(find "$THEME_DIR" -maxdepth 1 -type f \( -iname "wallpaper.*" -o -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.bmp" \) | head -n 1)
+
+if [ -n "$WALLPAPER" ]; then
+    swww img "$WALLPAPER" --transition-fade
+else
+    echo "No wallpaper found in $THEME_DIR"
+fi
 
 hyprctl reload
 pkill -SIGUSR2 waybar
-pkill rofi
+pkill rofi || true
 
 echo "Theme $THEME activated"
