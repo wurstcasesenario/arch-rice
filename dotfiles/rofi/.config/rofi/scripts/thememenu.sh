@@ -16,9 +16,8 @@ for theme in "$THEMES_DIR"/*; do
 
     # find wallpaper
     wallpaper="$(find "$theme" -maxdepth 1 -type f \( \
-        -iname "wallpaper.jpg" \
-        -o -iname "wallpaper.png" \
-        -o -iname "wallpaper.webp" \
+        -iname "wallpaper.*" -o \
+        -iname "wallpaper" \
     \) | head -n 1)"
 
     if [ -n "$wallpaper" ]; then

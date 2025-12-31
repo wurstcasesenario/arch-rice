@@ -22,7 +22,7 @@ fi
 ln -s "$THEME_DIR" "$CURRENT_LINK"
 
 
-WALLPAPER=$(find "$THEME_DIR" -maxdepth 1 -type f \( -iname "wallpaper.*" -o -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.bmp" \) | head -n 1)
+WALLPAPER=$(find "$THEME_DIR" -maxdepth 1 -type f \( -iname "wallpaper.*" -o -iname "wallpaper" \) | head -n 1)
 
 if [ -n "$WALLPAPER" ]; then
     swww img "$WALLPAPER"
