@@ -7,6 +7,7 @@ options=(
   "Bluetooth"
   "WiFi"
   "WebApp"
+  "Audio"
   "Themes"
 )
 
@@ -27,6 +28,9 @@ case "$choice" in
         ;;
     "WebApp")
         ~/.config/rofi/scripts/webappmenu.sh
+        ;;
+    "Audio")
+        pavucontrol
         ;;
     "Themes")
         ~/.config/rofi/scripts/thememenu.sh

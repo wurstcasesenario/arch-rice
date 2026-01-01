@@ -1,0 +1,18 @@
+2026-01-01 20:30:22.282 [info] Extension host with pid 232314 started
+2026-01-01 20:30:22.282 [info] Skipping acquiring lock for /home/tim/.config/Code/User/workspaceStorage/0af067261d547ee50228a9631c5cee85.
+2026-01-01 20:30:22.308 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-01-01 20:30:22.323 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2026-01-01 20:30:22.386 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2026-01-01 20:30:22.397 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-01-01 20:30:22.437 [info] Eager extensions activated
+2026-01-01 20:30:22.441 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-01-01 20:30:22.442 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-01-01 20:30:26.474 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2026-01-01 20:31:09.110 [info] ExtensionService#_doActivateExtension vscode.terminal-suggest, startup: false, activationEvent: 'onTerminalShellIntegration:*'
+2026-01-01 20:31:40.449 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2026-01-01 20:31:40.454 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2026-01-01 20:31:40.462 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2026-01-01 20:31:40.492 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2026-01-01 20:36:11.468 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:css'
+2026-01-01 21:03:19.124 [info] Extension host terminating: renderer closed the MessagePort
+2026-01-01 21:03:19.134 [info] Extension host with pid 232314 exiting with code 0

@@ -1,0 +1,4 @@
+$active_border_color = rgb({{accent}})
+$inactive_border_color = rgb({{bg3}})
+
+$red = rgb({{red}})

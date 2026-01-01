@@ -13,6 +13,15 @@
             },
             {
                 "folderUri": "file:///home/tim/arch-rice/dotfiles/waybar/.config/waybar"
+            },
+            {
+                "folderUri": "file:///home/tim/.config/gtk-4.0"
+            },
+            {
+                "folderUri": "file:///home/tim/.config/themes/current"
+            },
+            {
+                "folderUri": "file:///home/tim/.config/themes"
             }
         ],
         "emptyWindows": []
@@ -22,7 +31,10 @@
         "workspaces": {
             "file:///home/tim/arch-rice/dotfiles/themes/.config/themes/gruvbox": "__default__profile__",
             "file:///home/tim/arch-rice/dotfiles/themes/.config/themes": "__default__profile__",
-            "file:///home/tim/arch-rice/dotfiles/waybar/.config/waybar": "__default__profile__"
+            "file:///home/tim/arch-rice/dotfiles/waybar/.config/waybar": "__default__profile__",
+            "file:///home/tim/.config/gtk-4.0": "__default__profile__",
+            "file:///home/tim/.config/themes/current": "__default__profile__",
+            "file:///home/tim/.config/themes": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -72,22 +84,68 @@
                 "d3b265d4549ec5e2776224d33cf21ba8": {
                     "sideBarVisible": true,
                     "auxiliaryBarVisible": false
+                },
+                "165762bf0a413b2987ca6da5462eaabf": {
+                    "sideBarVisible": false,
+                    "auxiliaryBarVisible": true
+                },
+                "96d9f6344b57dc95f6a0b0d5c26b8f5f": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "0af067261d547ee50228a9631c5cee85": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
                 }
             }
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/tim/arch-rice/dotfiles/themes/.config/themes",
-            "backupPath": "/home/tim/.config/Code/Backups/8d4a85347c23dd6cb6b4d2c3240a8307",
+            "folder": "file:///home/tim/.config/themes",
+            "backupPath": "/home/tim/.config/Code/Backups/b22c6bf21b027369597fa13ff5856e0d",
             "uiState": {
                 "mode": 0,
                 "x": 0,
                 "y": 0,
-                "width": 1260,
-                "height": 675
+                "width": 1040,
+                "height": 915
             }
         },
-        "openedWindows": []
+        "openedWindows": [
+            {
+                "folder": "file:///home/tim/arch-rice/dotfiles/themes/.config/themes",
+                "backupPath": "/home/tim/.config/Code/Backups/8d4a85347c23dd6cb6b4d2c3240a8307",
+                "uiState": {
+                    "mode": 0,
+                    "x": 0,
+                    "y": 0,
+                    "width": 1260,
+                    "height": 675
+                }
+            },
+            {
+                "folder": "file:///home/tim/.config/gtk-4.0",
+                "backupPath": "/home/tim/.config/Code/Backups/e0e9a6e42eaa7e09bf6c81224f0b4210",
+                "uiState": {
+                    "mode": 0,
+                    "x": 0,
+                    "y": 0,
+                    "width": 1260,
+                    "height": 675
+                }
+            },
+            {
+                "folder": "file:///home/tim/.config/themes",
+                "backupPath": "/home/tim/.config/Code/Backups/b22c6bf21b027369597fa13ff5856e0d",
+                "uiState": {
+                    "mode": 0,
+                    "x": 0,
+                    "y": 0,
+                    "width": 1040,
+                    "height": 915
+                }
+            }
+        ]
     }
 }

@@ -25,5 +25,6 @@ cd "$INSTALL_PATH" || exit 1
 ./install-steam.sh
 ./install-browser.sh
 ./install-rofi.sh
+./install-bambuStudio.sh
 
 ./install-dotfiles.sh
