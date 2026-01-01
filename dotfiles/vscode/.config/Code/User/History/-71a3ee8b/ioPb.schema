@@ -1,0 +1,43 @@
+foreground              #{{fg1}}
+background              #{{bg0}}
+selection_foreground    #{{928374}}
+selection_background    #{{fg1}}
+
+cursor                  #{{928374}}
+cursor_text_color       background
+
+url_color               #{{blueL}}
+
+# black
+color0 #{{bg3}}
+color8 #{{bg4}}
+
+# red
+color1 #{{red}}
+color9 #{{redL}}
+
+# green
+color2  #{{green}}
+color10 #{{greenL}}
+
+# yellow
+color3  #{{yellow}}
+color11 #{{yellowL}}
+
+# blue
+color4  #{{blue}}
+color12 #{{blueL}}
+
+# purple
+color5  #{{purple}}
+color13 #{{purpleL}}
+
+# aqua
+color6  #{{aqua}}
+color14 #{{aquaL}}
+
+# white
+color7  #{{fg4}}
+color15 #{{fg3}}
+
+#ee

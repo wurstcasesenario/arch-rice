@@ -1,0 +1,42 @@
+{
+    "bg0": "2b1b15",
+    "bg1": "3a2a20",
+    "bg2": "4b382d",
+    "bg3": "5c473a",
+    "bg4": "6d5647",
+
+    "bg0T": "2b1b15e6",
+    "bg1T": "3a2a20e6",
+    "bg2T": "4b382de6",
+    "bg3T": "5c473ae6",
+    "bg4T": "6d5647e6",
+    
+    "fg0": "f5e6d3",
+    "fg1": "ead8c2",
+    "fg2": "d9c4af",
+    "fg3": "cbb8a0",
+    "fg4": "bda890",
+
+    "red": "b65c42",
+    "redL": "d07b61",
+
+    "orange": "c0804f",
+    "orangeL": "d49c6e",
+
+    "green": "8a7f65",
+    "greenL": "a29c83",
+
+    "yellow": "d4b67a",
+    "yellowL": "e1c693",
+
+    "blue": "6a5f50",
+    "blueL": "837565",
+
+    "purple": "a1778b",
+    "purpleL": "b3919e",
+
+    "aqua": "7e7162",
+    "aquaL": "968774",
+    
+    "accent": "c0804f"
+}

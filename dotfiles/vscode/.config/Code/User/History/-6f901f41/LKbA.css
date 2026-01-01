@@ -1,0 +1,44 @@
+@define-color bg0 #1e1e2ee6;
+@define-color fg0 #cdd6f4;
+@define-color accent #cba6f7;
+
+
+* {
+    /* Backgrounds */
+    --bg0: #1e1e2ee6;
+    --bg1: #181825e6;
+    --bg2: #11111be6;
+    --bg3: #313244e6;
+    --bg4: #45475ae6;
+
+    /* Foregrounds */
+    --fg0: #cdd6f4;
+    --fg1: #bac2de;
+    --fg2: #a6adc8;
+    --fg3: #9399b2;
+    --fg4: #7f849c;
+
+    /* Accents */
+    --red: #f38ba8;
+    --redL: #eba0ac;
+
+    --orange: #fab387;
+    --orangeL: #f9e2af;
+
+    --green: #a6e3a1;
+    --greenL: #94e2d5;
+
+    --yellow: #f9e2af;
+    --yellowL: #fab387;
+
+    --blue: #89b4fa;
+    --blueL: #74c7ec;
+
+    --purple: #cba6f7;
+    --purpleL: #b4befe;
+
+    --aqua: #94e2d5;
+    --aquaL: #89dceb;
+
+    --accent: #cba6f7;
+}

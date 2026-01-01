@@ -12,7 +12,7 @@ for theme in "$THEMES_DIR"/*; do
     name="$(basename "$theme")"
 
     # skip special dirs
-    [ "$name" = "current" ] && continue
+    [ "$name" = "current" ] || [ "$name" = "schemas" ] && continue
 
     # find wallpaper
     wallpaper="$(find "$theme" -maxdepth 1 -type f \( \

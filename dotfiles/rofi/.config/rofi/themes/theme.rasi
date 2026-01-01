@@ -1,14 +1,7 @@
+@import "~/.config/themes/current/rofiColors.rasi"
+
 * {
     font:   "Cascadia Mono Nerd Font 14";
-
-    bg0:    #212121F2;
-    bg1:    #2A2A2A;
-    bg2:    #3D3D3D80;
-    bg3:    #1A73E8F2;
-    fg0:    #E6E6E6;
-    fg1:    #FFFFFF;
-    fg2:    #969696;
-    fg3:    #3D3D3D;
 
     background-color:   transparent;
     text-color:         @fg0;
@@ -24,6 +17,7 @@ window {
     border-radius: 10px;
 
     background-color:   @bg0;
+    window-opacity: 0.9;
 }
 
 mainbox {
@@ -48,7 +42,7 @@ prompt {
 }
 
 entry {
-    placeholder:        "Search";
+    placeholder:        "";
     placeholder-color:  @fg3;
 }
 
