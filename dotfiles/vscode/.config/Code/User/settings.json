@@ -3,9 +3,13 @@
     "editor.fontFamily": "'Cascadia Mono Nerd Font', 'monospace', monospace",
     "explorer.confirmDelete": false,
     "projectManager.git.baseFolders": [
-        "~/Coding"
+        "~/Coding",
+        "~/programming"
     ],
-    "workbench.colorTheme": "Tokyo Night",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
     "workbench.iconTheme": "material-icon-theme",
-    "git.openRepositoryInParentFolders": "never"
+    "git.openRepositoryInParentFolders": "never",
+    "explorer.confirmDragAndDrop": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "git.autofetch": true
 }
