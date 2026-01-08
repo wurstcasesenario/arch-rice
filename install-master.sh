@@ -26,5 +26,6 @@ cd "$INSTALL_PATH" || exit 1
 ./install-browser.sh
 ./install-rofi.sh
 ./install-bambuStudio.sh
+./install-libreOffice.sh
 
 ./install-dotfiles.sh
