@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=WhatsApp
+Exec=chromium --app=https://web.whatsapp.com
+Terminal=false
+Type=Application
+Categories=Network;WebApp;
+Icon=/home/tim/arch-rice/dotfiles/webapps/.local/share/icons/webapps/whatsapp.png
