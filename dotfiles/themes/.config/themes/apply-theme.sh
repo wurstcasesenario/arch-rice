@@ -51,4 +51,7 @@ pkill -SIGUSR2 waybar || true
 pkill rofi || true
 pkill nautilus || true
 
+pkill swaync || true
+swaync &
+
 echo "Theme $THEME activated"

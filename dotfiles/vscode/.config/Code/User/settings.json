@@ -1,15 +1,16 @@
 {
-    "telemetry.feedback.enabled": false,
-    "editor.fontFamily": "'Cascadia Mono Nerd Font', 'monospace', monospace",
-    "explorer.confirmDelete": false,
-    "projectManager.git.baseFolders": [
-        "~/Coding",
-        "~/programming"
-    ],
-    "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.iconTheme": "material-icon-theme",
-    "git.openRepositoryInParentFolders": "never",
-    "explorer.confirmDragAndDrop": false,
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "git.autofetch": true
+  "telemetry.feedback.enabled": false,
+  "editor.fontFamily": "'Cascadia Mono Nerd Font', 'monospace', monospace",
+  "explorer.confirmDelete": false,
+  "projectManager.git.baseFolders": [
+    "~/Coding",
+    "~/programming"
+  ],
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.iconTheme": "material-icon-theme",
+  "git.openRepositoryInParentFolders": "never",
+  "explorer.confirmDragAndDrop": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "git.autofetch": true,
+  "security.workspace.trust.untrustedFiles": "open"
 }

@@ -1,7 +1,10 @@
 alefragnani.project-manager
 catppuccin.catppuccin-vsc
 enkia.tokyo-night
+esbenp.prettier-vscode
 fill-labs.dependi
+github.copilot
+github.copilot-chat
 jdinhlife.gruvbox
 ms-vscode.cmake-tools
 ms-vscode.cpptools

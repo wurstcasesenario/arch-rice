@@ -1,0 +1,105 @@
+* {
+  color: #bac2de;
+
+  all: unset;
+  transition: 200ms;
+}
+
+.notification-row {
+  outline: none;
+  margin: 0;
+  padding: 0px;
+}
+
+.floating-notifications.background .notification-row .notification-background {
+  background: #1e1e2ee6;
+  border: 2px solid #1e1e2ee6;
+  border-radius: 6px;
+  margin: 16px;
+  padding: 0;
+  transition: background 0.15s ease-in-out;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification {
+  border-radius: 10px;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification.critical {
+  border: 2px solid #eba0ac;
+  border-radius: 4px;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification.critical .summary {
+  color: #eba0ac;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification .notification-content {
+  margin: 10px;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * {
+  min-height: 10px;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action {
+  border-radius: 8px;
+  background-color: #1e1e2ee6 ;
+  margin: 6px;
+  border: 1px solid transparent;
+  transition: background 0.15s ease-in-out;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
+  background-color: alpha(#1e1e2e, 0.6);
+  border: 1px solid #cba6f7;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
+  background-color: #cba6f7;
+  color: #1e1e2e;
+}
+
+.image {
+  margin: 0px 12px 0px 0px;
+  border-radius: 5px;
+}
+
+.summary {
+  font-family: Ndot55Caps;
+  font-weight: bold;
+  font-size: 18px;
+  color: #bac2de;
+  padding-bottom: 3px;
+}
+
+.body {
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.floating-notifications.background .notification-row .notification-background .close-button {
+  margin: 6px;
+  padding: 2px;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.floating-notifications.background .notification-row .notification-background .close-button:hover {
+  background-color: #cba6f7;
+}
+
+.floating-notifications.background .notification-row .notification-background .close-button:active {
+  background-color: #cba6f7;
+  color: 1e1e2e;
+}
+
+.notification.critical progress {
+  background-color: #cba6f7;
+}
+
+.notification.low progress,
+.notification.normal progress {
+  background-color: #cba6f7;
+}

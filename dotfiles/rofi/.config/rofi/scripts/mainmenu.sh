@@ -9,6 +9,7 @@ options=(
   "WebApp"
   "Audio"
   "Themes"
+  "Screenshots"
 )
 
 # Show Rofi
@@ -34,6 +35,9 @@ case "$choice" in
         ;;
     "Themes")
         ~/.config/rofi/scripts/thememenu.sh
+        ;;
+    "Screenshots")
+        ~/.config/rofi/scripts/screenshotmenu.sh
         ;;
 
 esac
