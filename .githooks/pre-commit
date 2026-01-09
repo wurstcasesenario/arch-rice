@@ -1,0 +1,7 @@
+#!/bin/bash
+# Save VS Code extensions and settings before commit
+
+VSCODE_DIR="$HOME/arch-rice/dotfiles/vscode/.config/Code/User"
+code --list-extensions > "$VSCODE_DIR/extensions.txt"
+git add "$VSCODE_DIR/extensions.txt"
+

@@ -7,6 +7,7 @@ INSTALL_PATH="$HOME/arch-rice/install"
 
 cd "$INSTALL_PATH" || exit 1
 
+./install-hooks.sh
 ./install-bash.sh
 
 ./install-stow.sh

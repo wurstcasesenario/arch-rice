@@ -1,0 +1,13 @@
+#!/bin/bash
+# Post-merge hook für VS Code Extensions und Settings
+
+
+VSCODE_DIR="$HOME/arch-rice/dotfiles/vscode/.config/Code/User"
+
+EXT_FILE="$VSCODE_DIR/extensions.txt"
+
+# Extensions installieren, falls Datei existiert
+if [[ -f "$EXT_FILE" ]]; then
+    echo "Installing VS Code extensions from $EXT_FILE..."
+    cat "$EXT_FILE" | xargs -L 1 code --install-extension
+fi
