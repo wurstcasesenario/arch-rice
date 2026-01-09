@@ -38,9 +38,40 @@ case "$choice" in
     [[ "$url" =~ ^https?:// ]] || url="https://$url"
 
     # === Icon ===
+    icon_choice=$(printf "Auto fetch\nProvide icon URL" | rofi -dmenu -p "Icon source")
+    [ -z "$icon_choice" ] && exit
+
     icon="$STOW_ICON_DIR/$app_id.png"
-    curl -sSL "$url/favicon.ico" -o "$icon" || true
-    [ -s "$icon" ] || icon="applications-internet"
+
+    case "$icon_choice" in
+      "Provide icon URL")
+        icon_url=$(rofi -dmenu -p "Icon URL")
+        [ -z "$icon_url" ] && icon_choice="Auto fetch"
+        ;;
+    esac
+
+    if [[ "$icon_choice" == "Auto fetch" ]]; then
+      domain=$(echo "$url" | sed 's#https\?://##' | cut -d/ -f1)
+
+      curl -sSL \
+        -A "Mozilla/5.0" \
+        "https://www.google.com/s2/favicons?sz=256&domain=$domain" \
+        -o "$icon" || true
+    else
+      curl -sSL \
+        -A "Mozilla/5.0" \
+        "$icon_url" \
+        -o "$icon" || true
+    fi
+
+    # Validate image
+    if ! file "$icon" | grep -qi image; then
+      rm -f "$icon"
+      icon="applications-internet"
+    fi
+
+
+
 
     # === Exec ===
     if [[ "$BROWSER" == "firefox" ]]; then

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Office
+Exec=chromium --app=https://m365.cloud.microsoft/apps
+Terminal=false
+Type=Application
+Categories=Network;WebApp;
+Icon=/home/tim/arch-rice/dotfiles/webapps/.local/share/icons/webapps/office.png

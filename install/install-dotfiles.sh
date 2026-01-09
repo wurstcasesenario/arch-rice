@@ -5,6 +5,7 @@ echo "=== Installing Dotfiles ==="
 cd ~/arch-rice/dotfiles
 
 stow -t ~ -v bash
+stow -t ~ -v zsh
 
 stow -t ~ -v themes
 stow -t ~ -v hypridle
