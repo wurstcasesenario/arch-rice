@@ -6,7 +6,7 @@
         "~/Coding",
         "~/programming"
     ],
-    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.iconTheme": "material-icon-theme",
     "git.openRepositoryInParentFolders": "never",
     "explorer.confirmDragAndDrop": false,

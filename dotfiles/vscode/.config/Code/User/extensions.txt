@@ -1,4 +1,5 @@
 alefragnani.project-manager
+catppuccin.catppuccin-vsc
 enkia.tokyo-night
 fill-labs.dependi
 jdinhlife.gruvbox
@@ -11,4 +12,3 @@ platformio.platformio-ide
 rust-lang.rust-analyzer
 tamasfe.even-better-toml
 usernamehw.errorlens
-catppuccin.catppuccin-vsc

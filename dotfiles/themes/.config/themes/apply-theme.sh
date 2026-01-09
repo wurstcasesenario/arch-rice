@@ -30,6 +30,22 @@ else
     echo "No wallpaper found in $THEME_DIR"
 fi
 
+# === Apply VS Code Theme ===
+SETTINGS="$HOME/.config/Code/User/settings.json"
+VSTHEME="$(cat "$CURRENT_LINK/vsTheme")"
+
+if ! command -v jq >/dev/null 2>&1; then
+  echo "jq is required but not installed"
+  exit 1
+fi
+
+tmp=$(mktemp)
+
+jq \
+  --arg theme "$VSTHEME" \
+  '.["workbench.colorTheme"] = $theme' \
+  "$SETTINGS" > "$tmp" && mv "$tmp" "$SETTINGS"
+
 hyprctl reload
 pkill -SIGUSR2 waybar || true
 pkill rofi || true
