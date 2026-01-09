@@ -2,4 +2,4 @@
 2. Make Theming
 3. Fix Roblox
 4. Configure Networking
-
+5. Fix Waybar
