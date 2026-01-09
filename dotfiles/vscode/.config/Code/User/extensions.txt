@@ -11,3 +11,4 @@ platformio.platformio-ide
 rust-lang.rust-analyzer
 tamasfe.even-better-toml
 usernamehw.errorlens
+catppuccin.catppuccin-vsc
