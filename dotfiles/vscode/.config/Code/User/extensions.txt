@@ -1,0 +1,13 @@
+alefragnani.project-manager
+enkia.tokyo-night
+fill-labs.dependi
+jdinhlife.gruvbox
+ms-vscode.cmake-tools
+ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
+ms-vscode.cpptools-themes
+pkief.material-icon-theme
+platformio.platformio-ide
+rust-lang.rust-analyzer
+tamasfe.even-better-toml
+usernamehw.errorlens
