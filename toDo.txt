@@ -1,5 +1,4 @@
-1. Fix Screenshot Binds
-2. Make Theming
+2. Make GTK Theming
 3. Fix Roblox
 4. Configure Networking
 5. Fix Waybar

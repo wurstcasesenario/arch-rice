@@ -57,11 +57,13 @@ case "$CHOICE" in
 
     VPN_NAME="$(basename "$CONFIG_PATH" .conf)"
 
-    # Import if it doesn't exist
-    if ! nmcli connection show "$VPN_NAME" >/dev/null 2>&1; then
-      nmcli connection import type wireguard file "$CONFIG_PATH" >/dev/null 2>&1 \
-        || { rofi -e "Import failed"; exit 1; }
-    fi
+    nmcli connection import type wireguard file "$CONFIG_PATH"
+
+    # # Import if it doesn't exist
+    # if ! nmcli connection show "$VPN_NAME" >/dev/null 2>&1; then
+    #   nmcli connection import type wireguard file "$CONFIG_PATH" >/dev/null 2>&1 \
+    #     || { rofi -e "Import failed"; exit 1; }
+    # fi
 
     nmcli connection up "$VPN_NAME" >/dev/null 2>&1
     exec "$SCRIPT_PATH"

@@ -32,3 +32,7 @@ fi
 cd "$AUR_DIR/yay"
 
 makepkg -si --noconfirm
+
+#=== Install Flatpak ===
+sudo pacman -S --noconfirm flatpak
+

@@ -5,7 +5,7 @@ CAPACITY=$(cat "$BAT_PATH/capacity")
 STATUS=$(cat "$BAT_PATH/status")
 
 # === DISPLAY CONFIG ===
-ICONS=("󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹")
+ICONS=("" "" "" "" "")
 CHECKPOINTS=(100 40 30 20 2)
 COLORS=("good" "warning" "critical" "critical" "critical")
 
@@ -51,7 +51,7 @@ if [[ "$STATUS" == "Charging" || "$STATUS" == "Full" ]]; then
     ICON=""
 fi
 
-TOOLTIP="$STATUS"
+TOOLTIP="$STATUS: "
 
 # === OUTPUT FOR WAYBAR ===
 echo "{\"text\": \"$ICON $CAPACITY%\", \"class\": \"$COLOR\", \"tooltip\": \"$TOOLTIP\"}"

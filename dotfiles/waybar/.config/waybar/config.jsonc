@@ -30,12 +30,12 @@
         "interval": "5",
         "format": "{}",
         "tooltip": "Toggle Notification Center",
-        "on-click": "swaync-client --toggle-panel",
+        "on-click": "swaync-client --toggle-panel"
     },
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "hyprland/window": {
         "format": "{}",
@@ -131,5 +131,5 @@
 	    "tooltip-format-enumerate-connected": "{device_alias}",
         "on-click": "rfkill toggle bluetooth",
         "on-click-right": "blueman-manager"
-    },
+    }
 }
