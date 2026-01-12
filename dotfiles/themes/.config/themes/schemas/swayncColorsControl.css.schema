@@ -176,7 +176,7 @@ progressbar {
   border-radius: 20px;
   box-shadow: none;
   padding: 3px;
-  color: #{{accent}}
+  color: #{{accent}};
 }
 
 .widget-dnd > switch:hover {

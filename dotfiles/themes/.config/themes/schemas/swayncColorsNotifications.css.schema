@@ -92,7 +92,7 @@
 
 .floating-notifications.background .notification-row .notification-background .close-button:active {
   background-color: #{{accent}};
-  color: {{bg0}};
+  color: #{{bg0}};
 }
 
 .notification.critical progress {

@@ -51,7 +51,6 @@ pkill -SIGUSR2 waybar || true
 pkill rofi || true
 pkill nautilus || true
 
-pkill swaync || true
-swaync &
+swaync-client --reload-config
 
 echo "Theme $THEME activated"

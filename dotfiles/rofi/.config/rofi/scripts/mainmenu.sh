@@ -6,6 +6,7 @@ options=(
   "Power Menu"
   "Bluetooth"
   "WiFi"
+  "VPN"
   "WebApp"
   "Audio"
   "Themes"
@@ -26,6 +27,9 @@ case "$choice" in
         ;;
     "WiFi")
         ~/.config/rofi/scripts/wifimenu.sh
+        ;;
+    "VPN")
+        ~/.config/rofi/scripts/vpnmenu.sh
         ;;
     "WebApp")
         ~/.config/rofi/scripts/webappmenu.sh

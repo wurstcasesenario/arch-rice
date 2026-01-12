@@ -176,7 +176,7 @@ progressbar {
   border-radius: 20px;
   box-shadow: none;
   padding: 3px;
-  color: #d65d0e
+  color: #d65d0e;
 }
 
 .widget-dnd > switch:hover {
