@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=PowerPoint
+Exec=chromium --app=https://powerpoint.cloud.microsoft
+Terminal=false
+Type=Application
+Categories=Network;WebApp;
+Icon=/home/tim/arch-rice/dotfiles/webapps/.local/share/icons/webapps/powerpoint.png

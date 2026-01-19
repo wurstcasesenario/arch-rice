@@ -21,3 +21,4 @@ stow -t ~ -v vscode
 stow -t ~ -v swaync
 stow -t ~ -v fontconfig
 stow -t ~ -v webapps
+stow -t ~ -v gromitMpx
