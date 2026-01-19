@@ -39,14 +39,12 @@ fi
 case "$CHOICE" in
   *Disconnect*)
     nmcli connection down "$ACTIVE_VPN" >/dev/null 2>&1
-    exec "$SCRIPT_PATH"
     ;;
 
   *Connect*)
     VPN=$(printf "%s\n" "$VPN_LIST" | rofi -dmenu -p "Select VPN")
     [ -z "$VPN" ] && exit 0
     nmcli connection up "$VPN" >/dev/null 2>&1
-    exec "$SCRIPT_PATH"
     ;;
 
   *Load*)

@@ -24,8 +24,16 @@ ln -s "$THEME_DIR" "$CURRENT_LINK"
 
 WALLPAPER=$(find "$THEME_DIR" -maxdepth 1 -type f \( -iname "wallpaper.*" -o -iname "wallpaper" \) | head -n 1)
 
-if [ -n "$WALLPAPER" ]; then
-    swww img "$WALLPAPER"
+if [ -n "$WALLPAPER" ] && [ -f "$WALLPAPER" ]; then
+    # Get list of connected monitors
+    MONITORS=$(hyprctl monitors | grep '^Monitor ' | awk '{print $2}')
+    
+    # Set wallpaper for each monitor
+    for MON in $MONITORS; do
+        hyprctl hyprpaper wallpaper "$MON","$WALLPAPER"
+    done
+    
+    echo "Wallpaper set: $WALLPAPER"
 else
     echo "No wallpaper found in $THEME_DIR"
 fi
