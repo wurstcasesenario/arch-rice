@@ -13,5 +13,6 @@ ms-vscode.cpptools-themes
 pkief.material-icon-theme
 platformio.platformio-ide
 rust-lang.rust-analyzer
+sainnhe.everforest
 tamasfe.even-better-toml
 usernamehw.errorlens

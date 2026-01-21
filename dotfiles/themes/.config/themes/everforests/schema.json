@@ -1,0 +1,44 @@
+{
+    "bg0": "2b3339",
+    "bg1": "323c41",
+    "bg2": "3a454a",
+    "bg3": "445055",
+    "bg4": "4f5b58",
+
+    "bg0T": "2b3339e6",
+    "bg1T": "323c41e6",
+    "bg2T": "3a454ae6",
+    "bg3T": "445055e6",
+    "bg4T": "4f5b58e6",
+    
+    "fg0": "d3c6aa",
+    "fg1": "e4e1cd",
+    "fg2": "9da9a0",
+    "fg3": "859289",
+    "fg4": "5c6a72",
+
+    "red": "e67e80",
+    "redL": "f85552",
+
+    "orange": "e69875",
+    "orangeL": "ffb378",
+
+    "green": "a7c080",
+    "greenL": "cbe3b3",
+
+    "yellow": "dbbc7f",
+    "yellowL": "f1cf8a",
+
+    "blue": "7fbbb3",
+    "blueL": "9fd7cd",
+
+    "purple": "d699b6",
+    "purpleL": "e2afc6",
+
+    "aqua": "83c092",
+    "aquaL": "a7d3a0",
+    
+    "accent": "e69875",
+
+    "vsTheme": "Everforest Dark"
+}
