@@ -1,0 +1,12 @@
+Type=X-GNOME-Metatheme
+[Desktop Entry]
+Name=Gruvbox-Orange-Orange-Dark
+Comment=An Flat Gtk+ theme based on Elegant Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Gruvbox-Orange-Orange-Dark
+MetacityTheme=Gruvbox-Orange-Orange-Dark
+IconTheme=Tela-circle-Dark
+CursorTheme=Gruvbox-Orange-cursors
+ButtonLayout=close,minimize,maximize:menu

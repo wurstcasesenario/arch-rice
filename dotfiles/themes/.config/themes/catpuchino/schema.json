@@ -40,5 +40,7 @@
 
     "accent": "cba6f7",
     
-    "vsTheme": "Catppuccin Mocha"
+    "vsTheme": "Catppuccin Mocha",
+
+    "gtkTheme": "Catppuccin-Mauve-Mauve-Dark"
 }

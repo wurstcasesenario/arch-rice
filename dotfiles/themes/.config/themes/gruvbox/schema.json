@@ -40,5 +40,7 @@
     
     "accent": "d65d0e",
 
-    "vsTheme": "Gruvbox Dark Hard"
+    "vsTheme": "Gruvbox Dark Hard",
+
+    "gtkTheme": "Gruvbox-Orange-Orange-Dark"
 }
