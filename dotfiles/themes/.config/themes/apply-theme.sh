@@ -81,7 +81,7 @@ hyprpaper &
 
 pkill -SIGUSR2 waybar || true
 pkill rofi || true
-# pkill nautilus || true
+pkill nautilus || true
 
 swaync-client --reload-config
 
