@@ -2,4 +2,4 @@
 
 echo "=== Installings QT Support ==="
 
-sudo pacman -S --noconfirm qt5-wayland qt6-wayland
+sudo pacman -S --needed --noconfirm qt5-wayland qt6-wayland

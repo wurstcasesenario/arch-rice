@@ -2,4 +2,4 @@
 
 echo "=== Installing Bambu Studio ==="
 
-yay -S --noconfirm bambustudio-bin
+yay -S --needed --noconfirm bambustudio-bin

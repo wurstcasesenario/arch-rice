@@ -2,4 +2,4 @@
 
 echo "=== Installing Rofi ==="
 
-sudo pacman -S --noconfirm rofi
+sudo pacman -S --needed --noconfirm rofi

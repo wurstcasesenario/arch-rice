@@ -2,5 +2,5 @@
 
 echo "=== Install LibreOffice ==="
 
-sudo pacman -S --noconfirm libreoffice-fresh
+sudo pacman -S --needed --noconfirm libreoffice-fresh
 

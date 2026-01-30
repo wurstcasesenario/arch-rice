@@ -2,4 +2,4 @@
 
 echo "=== Installing Terminal Tools ==="
 
-sudo pacman -S --noconfirm kitty starship fastfetch tree htop zsh
+sudo pacman -S --needed --noconfirm kitty starship fastfetch tree htop zsh

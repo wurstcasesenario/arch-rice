@@ -2,4 +2,4 @@
 
 echo "=== Installing VS-Code ==="
 
-yay -S --noconfirm visual-studio-code-bin
+yay -S --needed --noconfirm visual-studio-code-bin

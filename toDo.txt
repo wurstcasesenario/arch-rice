@@ -1,4 +1,6 @@
-2. Make GTK Theming
-3. Fix Roblox
-4. Configure Networking
-5. Fix Waybar
+1. Fix Fonts
+2. Fix Roblox
+3. Polkit?
+4. Fix Waybar on mulit monitor 
+5. QT?
+6. Screenshare

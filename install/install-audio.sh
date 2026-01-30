@@ -2,7 +2,7 @@
 
 echo "=== Installing Audio Utilities ==="
 
-sudo pacman -S --noconfirm pipewire-alsa pipewire pipewire-pulse wireplumber jack2 \
+sudo pacman -S --needed --noconfirm pipewire-alsa pipewire pipewire-pulse wireplumber jack2 \
 pavucontrol pamixer
 
 systemctl --user enable --now pipewire
