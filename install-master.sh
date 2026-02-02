@@ -2,6 +2,7 @@
 
 echo "=== Updating System ==="
 sudo pacman -Syu --noconfirm
+flatpak update -y
 
 INSTALL_PATH="$HOME/arch-rice/install"
 
@@ -30,5 +31,6 @@ cd "$INSTALL_PATH" || exit 1
 ./install-rofi.sh
 ./install-bambuStudio.sh
 ./install-libreOffice.sh
+./install-roblox.sh
 
 ./install-dotfiles.sh
