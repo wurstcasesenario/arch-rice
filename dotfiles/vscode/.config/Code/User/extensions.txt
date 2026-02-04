@@ -16,9 +16,11 @@ redhat.java
 rust-lang.rust-analyzer
 tamasfe.even-better-toml
 usernamehw.errorlens
+vscjava.migrate-java-to-azure
 vscjava.vscode-gradle
 vscjava.vscode-java-debug
 vscjava.vscode-java-dependency
 vscjava.vscode-java-pack
 vscjava.vscode-java-test
+vscjava.vscode-java-upgrade
 vscjava.vscode-maven
