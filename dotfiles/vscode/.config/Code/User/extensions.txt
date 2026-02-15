@@ -3,6 +3,7 @@ catppuccin.catppuccin-vsc
 enkia.tokyo-night
 esbenp.prettier-vscode
 fill-labs.dependi
+github.copilot
 github.copilot-chat
 jdinhlife.gruvbox
 ms-python.debugpy
@@ -18,6 +19,7 @@ pkief.material-icon-theme
 platformio.platformio-ide
 redhat.java
 rust-lang.rust-analyzer
+sainnhe.everforest
 tamasfe.even-better-toml
 usernamehw.errorlens
 vscjava.migrate-java-to-azure
