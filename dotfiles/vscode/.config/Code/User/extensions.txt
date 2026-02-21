@@ -3,14 +3,15 @@ catppuccin.catppuccin-vsc
 enkia.tokyo-night
 esbenp.prettier-vscode
 fill-labs.dependi
-github.copilot
 github.copilot-chat
 jdinhlife.gruvbox
+kevinrose.vsc-python-indent
 ms-python.debugpy
 ms-python.python
 ms-python.vscode-pylance
 ms-python.vscode-python-envs
 ms-vscode.cmake-tools
+ms-vscode.cpp-devtools
 ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
 ms-vscode.cpptools-themes
@@ -19,8 +20,8 @@ pkief.material-icon-theme
 platformio.platformio-ide
 redhat.java
 rust-lang.rust-analyzer
-sainnhe.everforest
 tamasfe.even-better-toml
+tomoki1207.pdf
 usernamehw.errorlens
 vscjava.migrate-java-to-azure
 vscjava.vscode-gradle
