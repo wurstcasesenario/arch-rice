@@ -72,4 +72,7 @@ setopt AUTO_MENU
 # ========================
 # PATH
 # ========================
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# Add Homebrew to PATH only if installed
+if [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
