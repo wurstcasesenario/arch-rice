@@ -6,6 +6,7 @@ fill-labs.dependi
 github.copilot-chat
 jdinhlife.gruvbox
 kevinrose.vsc-python-indent
+ms-azuretools.vscode-containers
 ms-python.debugpy
 ms-python.python
 ms-python.vscode-pylance
@@ -15,6 +16,7 @@ ms-vscode.cpp-devtools
 ms-vscode.cpptools
 ms-vscode.cpptools-extension-pack
 ms-vscode.cpptools-themes
+ms-vscode.powershell
 openai.chatgpt
 pkief.material-icon-theme
 platformio.platformio-ide

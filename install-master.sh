@@ -32,5 +32,6 @@ cd "$INSTALL_PATH" || exit 1
 ./install-bambuStudio.sh
 ./install-libreOffice.sh
 ./install-roblox.sh
+./install-printer.sh
 
 ./install-dotfiles.sh
