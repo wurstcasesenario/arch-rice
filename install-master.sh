@@ -33,5 +33,6 @@ cd "$INSTALL_PATH" || exit 1
 ./install-libreOffice.sh
 ./install-roblox.sh
 ./install-printer.sh
+./install-kicad.sh
 
 ./install-dotfiles.sh
