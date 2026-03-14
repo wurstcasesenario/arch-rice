@@ -8,7 +8,7 @@ sudo pacman -S --needed --noconfirm steam
 # sudo pacman -S --needed --noconfirm gamescope
 
 # ---- Proton GE ----
-STEAM_COMPAT="$HOME/.steam/root/compatibilitytools.d"
+STEAM_COMPAT="$HOME/.local/share/Steam/compatibilitytools.d"
 mkdir -p "$STEAM_COMPAT"
 
 # Get latest Proton GE release URL
