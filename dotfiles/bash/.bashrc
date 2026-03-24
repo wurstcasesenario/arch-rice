@@ -10,24 +10,20 @@ if [ -d "$HOME/.local/bin" ]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
-if [ -d "$HOME/.cargo/bin" ]; then
-    export PATH="$HOME/.cargo/bin:$PATH"
+# Add Flutter SDK to PATH only if the folder exists
+if [ -d "$HOME/development/flutter/bin" ]; then
+    export PATH="$PATH:$HOME/development/flutter/bin"
 fi
 
-# Add ESPUP Rustc
-if [ -d "$HOME/.rustup/toolchains/esp/bin" ]; then
-    export PATH="$HOME/.rustup/toolchains/esp/bin:$PATH"
+# Adds CHROME_EXECUTABLE if Chromium is installed
+if [ -f /usr/bin/chromium ]; then
+    export CHROME_EXECUTABLE=/usr/bin/chromium
 fi
 
-# Rust / Cargo
-if [ -f "$HOME/.cargo/env" ]; then
-    source "$HOME/.cargo/env"
+if [ -f /usr/bin/ ]; then
+    export ANDROID_HOME=$HOME/Android/Sdk
 fi
 
-# ESP Rust toolchain (only if installed)
-if [ -f "$HOME/export-esp.sh" ]; then
-    source "$HOME/export-esp.sh"
-fi
 
 # Initialize Starship prompt if installed
 if command -v starship >/dev/null 2>&1; then

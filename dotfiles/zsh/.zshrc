@@ -76,3 +76,13 @@ setopt AUTO_MENU
 if [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
+
+# Add Flutter SDK to PATH only if the folder exists
+if [ -d "$HOME/development/flutter/bin" ]; then
+    export PATH="$PATH:$HOME/development/flutter/bin"
+fi
+
+# Adds CHROME_EXECUTABLE if Chromium is installed
+if [ -f /usr/bin/chromium ]; then
+    export CHROME_EXECUTABLE=/usr/bin/chromium
+fi

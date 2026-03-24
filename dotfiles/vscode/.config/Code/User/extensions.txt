@@ -1,5 +1,7 @@
 alefragnani.project-manager
 catppuccin.catppuccin-vsc
+dart-code.dart-code
+dart-code.flutter
 davidanson.vscode-markdownlint
 eamodio.gitlens
 enkia.tokyo-night
