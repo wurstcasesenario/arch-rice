@@ -11,7 +11,7 @@ case "$PROFILE" in
     pc)
         echo "=== Installing PC Drivers (NVIDIA) ==="
         sudo pacman -S --needed --noconfirm \
-            nvidia nvidia-utils lib32-nvidia-utils nvidia-settings egl-wayland
+            nvidia-utils lib32-nvidia-utils nvidia-settings egl-wayland
         ;;
     *)
         echo "Unsupported ARCH_RICE_PROFILE: $PROFILE"
