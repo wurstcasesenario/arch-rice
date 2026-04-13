@@ -9,6 +9,10 @@ case "$PROFILE" in
     laptop)
         platform_packages=(
             waybar-laptop
+            zsh-laptop
+        )
+        opposite_platform_packages=(
+            waybar-pc
             zsh-pc
         )
         ;;
@@ -16,6 +20,10 @@ case "$PROFILE" in
         platform_packages=(
             waybar-pc
             zsh-pc
+        )
+        opposite_platform_packages=(
+            waybar-laptop
+            zsh-laptop
         )
         ;;
     *)
@@ -50,4 +58,12 @@ for pkg in "${packages[@]}"; do
     stow -t "$HOME" -v "$pkg"
 done
 
-stow -t "$HOME" -v "${platform_packages[0]}"
+for pkg in "${opposite_platform_packages[@]}"; do
+    if [[ -d "$pkg" ]]; then
+        stow -D -t "$HOME" -v "$pkg" || true
+    fi
+done
+
+for pkg in "${platform_packages[@]}"; do
+    stow -t "$HOME" -v "$pkg"
+done
