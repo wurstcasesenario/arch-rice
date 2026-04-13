@@ -7,4 +7,4 @@ hypridle hyprlock hyprshot swaync brightnessctl \
 xdg-desktop-portal-hyprland cliphist hyprpolkitagent \
 hyprpaper
 
-yay -S --needed --noconfirm rose-pine-hyprcursor gromit-mpx hyprshutdown
+yay -S --needed --noconfirm rose-pine-hyprcursor

@@ -1,26 +1,53 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-echo "=== Installing Dotfiles ==="
+PROFILE="${ARCH_RICE_PROFILE:-laptop}"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+DOTFILES_DIR="$REPO_ROOT/dotfiles"
 
-cd ~/arch-rice/dotfiles
+case "$PROFILE" in
+    laptop)
+        platform_packages=(
+            waybar-laptop
+            zsh-pc
+        )
+        ;;
+    pc)
+        platform_packages=(
+            waybar-pc
+            zsh-pc
+        )
+        ;;
+    *)
+        echo "Unsupported ARCH_RICE_PROFILE: $PROFILE"
+        echo "Supported profiles: laptop, pc"
+        exit 1
+        ;;
+esac
 
-stow -t ~ -v bash
-stow -t ~ -v zsh
+echo "=== Installing Dotfiles (profile: $PROFILE) ==="
+cd "$DOTFILES_DIR"
 
-stow -t ~ -v themes
-# stow -t ~ -v systemthemes
-stow -t ~ -v hypridle
-stow -t ~ -v hyprland
-stow -t ~ -v hyprlock
-stow -t ~ -v hyprconfig
-stow -t ~ -v hyprpaper
-stow -t ~ -v waybar
-stow -t ~ -v kitty
-stow -t ~ -v starship
-stow -t ~ -v rofi
-stow -t ~ -v fastfetch
-# stow -t ~ -v vscode
-stow -t ~ -v swaync
-stow -t ~ -v fontconfig
-stow -t ~ -v webapps
-stow -t ~ -v gromitMpx
+packages=(
+    bash
+    themes
+    hypridle
+    hyprland
+    hyprlock
+    hyprconfig
+    hyprpaper
+    kitty
+    starship
+    rofi
+    fastfetch
+    swaync
+    fontconfig
+    webapps
+    gromitMpx
+)
+
+for pkg in "${packages[@]}"; do
+    stow -t "$HOME" -v "$pkg"
+done
+
+stow -t "$HOME" -v "${platform_packages[0]}"

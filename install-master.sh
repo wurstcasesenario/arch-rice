@@ -1,38 +1,119 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-echo "=== Updating System ==="
-sudo pacman -Syu --noconfirm
-flatpak update -y
+usage() {
+    cat <<'USAGE'
+Usage: ./install-master.sh [--profile laptop|pc] [--no-update]
 
-INSTALL_PATH="$HOME/arch-rice/install"
+Options:
+  -p, --profile   Hardware profile to install (default: laptop)
+      --laptop    Shortcut for --profile laptop
+      --pc        Shortcut for --profile pc
+      --no-update Skip pacman/flatpak system update step
+  -h, --help      Show this help message
+USAGE
+}
 
-cd "$INSTALL_PATH" || exit 1
+PROFILE="${ARCH_RICE_PROFILE:-laptop}"
+RUN_SYSTEM_UPDATE=1
 
-./install-hooks.sh
-#./install-bash.sh
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -p|--profile)
+            if [[ $# -lt 2 ]]; then
+                echo "Missing value for $1"
+                usage
+                exit 1
+            fi
+            PROFILE="$2"
+            shift 2
+            ;;
+        --laptop)
+            PROFILE="laptop"
+            shift
+            ;;
+        --pc)
+            PROFILE="pc"
+            shift
+            ;;
+        --no-update)
+            RUN_SYSTEM_UPDATE=0
+            shift
+            ;;
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        *)
+            echo "Unknown option: $1"
+            usage
+            exit 1
+            ;;
+    esac
+done
 
-./install-stow.sh
-./install-tools.sh
-./install-drivers.sh
-./install-fonts.sh
-./install-network.sh
-./install-hypr.sh
-./install-terminal.sh
-./install-qt.sh
-./install-fileManager.sh
-./install-audio.sh
-./install-polkit.sh
-./install-terminal.sh
-./install-applications.sh
-./install-discord.sh
-./install-vscode.sh
-./install-steam.sh
-./install-browser.sh
-./install-rofi.sh
-./install-bambuStudio.sh
-./install-libreOffice.sh
-./install-roblox.sh
-./install-printer.sh
-./install-kicad.sh
+case "$PROFILE" in
+    laptop|pc) ;;
+    *)
+        echo "Unsupported profile: $PROFILE"
+        echo "Supported profiles: laptop, pc"
+        exit 1
+        ;;
+esac
 
-./install-dotfiles.sh
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+INSTALL_PATH="$ROOT_DIR/install"
+
+export ARCH_RICE_PROFILE="$PROFILE"
+cd "$ROOT_DIR"
+
+echo "=== Arch Rice Installer ==="
+echo "Profile: $ARCH_RICE_PROFILE"
+
+if [[ "$RUN_SYSTEM_UPDATE" -eq 1 ]]; then
+    echo "=== Updating System ==="
+    sudo pacman -Syu --noconfirm
+
+    if command -v flatpak >/dev/null 2>&1; then
+        flatpak update -y
+    fi
+else
+    echo "=== Skipping system updates (--no-update) ==="
+fi
+
+"$ROOT_DIR/install-hooks.sh"
+
+cd "$INSTALL_PATH"
+
+scripts=(
+    install-stow.sh
+    install-tools.sh
+    install-drivers.sh
+    install-fonts.sh
+    install-network.sh
+    install-hypr.sh
+    install-terminal.sh
+    install-qt.sh
+    install-fileManager.sh
+    install-audio.sh
+    install-polkit.sh
+    install-applications.sh
+    install-discord.sh
+    install-vscode.sh
+    install-steam.sh
+    install-browser.sh
+    install-rofi.sh
+    install-bambuStudio.sh
+    install-libreOffice.sh
+    install-roblox.sh
+    install-print.sh
+    install-kicad.sh
+    install-dotfiles.sh
+)
+
+for script in "${scripts[@]}"; do
+    echo "=== Running $script (profile: $ARCH_RICE_PROFILE) ==="
+    "./$script"
+done
+
+echo "=== Install complete for profile: $ARCH_RICE_PROFILE ==="
