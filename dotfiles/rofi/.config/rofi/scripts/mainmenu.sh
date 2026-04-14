@@ -7,6 +7,8 @@ options=(
   "Bluetooth"
   "WiFi"
   "VPN"
+  "Night Mode"
+  "Battery Saver"
   "WebApp"
   "Audio"
   "Themes"
@@ -30,6 +32,12 @@ case "$choice" in
         ;;
     "VPN")
         ~/.config/rofi/scripts/vpnmenu.sh
+        ;;
+    "Night Mode")
+        ~/.config/rofi/scripts/nightmodemenu.sh
+        ;;
+    "Battery Saver")
+        ~/.config/rofi/scripts/batterysavemenu.sh
         ;;
     "WebApp")
         ~/.config/rofi/scripts/webappmenu.sh
