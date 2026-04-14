@@ -2,6 +2,6 @@
 @import "./swayncColorsControl.css";
 
 .notification-group {
-  background-color: transparent;
+  background: transparent;
   outline: none;
 }
