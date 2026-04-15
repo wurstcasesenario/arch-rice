@@ -1,4 +1,4 @@
-@import '../../colors.css';
+@import 'swayncColors.css';
 
 @define-color hover alpha(@bg2, 0.6);
 
@@ -87,6 +87,12 @@
   border-radius: 6px;
   margin: 4px 0px;
   padding: 2px;
+}
+
+.control-center .control-center-list-placeholder,
+.control-center .control-center-list-placeholder label {
+  color: @fg1;
+  opacity: 0.95;
 }
 
 .notification {
