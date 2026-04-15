@@ -1,0 +1,114 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+
+require_nmcli() {
+	if ! command -v nmcli >/dev/null 2>&1; then
+		echo "Error: nmcli is not installed." >&2
+		exit 1
+	fi
+}
+
+usage() {
+  echo "Usage:"
+  echo "  vpnctl active"
+  echo "  vpnctl list"
+  echo "  vpnctl connect <name>"
+  echo "  vpnctl disconnect"
+  echo "  vpnctl status"
+  echo "  vpnctl toggle"
+  echo "  vpnctl load <file>"
+}
+
+notify() {
+  command -v notify-send >/dev/null 2>&1 || return 0
+  notify-send "$@"
+}
+
+get_wireguard() {
+  nmcli -t -f NAME,TYPE,DEVICE connection show "$@" |
+  awk -F: '$2 == "wireguard" { print $1 }'
+}
+
+active() {
+  get_wireguard --active
+}
+
+list() {
+  get_wireguard
+}
+
+connect() {
+  local name="$1"
+  [ -z "$name" ] && exit 1
+  nmcli connection up "$name" >/dev/null 2>&1
+  notify -u low "VPN connected" "$name"
+}
+
+disconnect() {
+  local names name
+  names="$(active)"
+
+  [ -z "$names" ] && exit 0
+  while IFS= read -r name; do
+    [ -z "$name" ] && continue
+    nmcli connection down "$name" >/dev/null 2>&1
+  done <<< "$names"
+
+  notify -u low "VPN disconnected" "Disconnected from VPNs"
+}
+
+status() {
+  if [ -n "$(active)" ]; then
+    echo "true"
+  else
+    echo "false"
+  fi
+}
+
+toggle() {
+  if [ -n "$(active)" ]; then
+    disconnect
+    echo "false"
+  else
+    connect "$(list | head -n 1)"
+    echo "true"
+  fi
+}
+
+load() {
+  local file="$1"
+
+  [ -z "$file" ] && exit 1
+  [ ! -f "$file" ] && echo "File not found: $file" >&2 && exit 1
+
+  local vpn_name
+  vpn_name="$(basename "$file" .conf)"
+
+  nmcli connection import type wireguard file "$file" >/dev/null 2>&1
+
+  # If import created differently named connection, fallback:
+  nmcli connection up "$vpn_name" >/dev/null 2>&1 || true
+
+  echo "$vpn_name"
+}
+
+cmd="${1:-}"
+
+[ -z "$cmd" ] && usage && exit 1
+
+require_nmcli
+
+case "$cmd" in
+  active) active ;;
+  list) list ;;
+  connect) connect "${2:-}" ;;
+  disconnect) disconnect ;;
+  status) status ;;
+  toggle) toggle ;;
+  load) load "${2:-}" ;;
+  *)
+    usage
+    exit 1
+    ;;
+esac

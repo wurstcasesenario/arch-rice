@@ -86,3 +86,8 @@ fi
 if [ -f /usr/bin/chromium ]; then
     export CHROME_EXECUTABLE=/usr/bin/chromium
 fi
+
+# Add Bin PATH
+if [ -d "$HOME/.local/bin" ]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi

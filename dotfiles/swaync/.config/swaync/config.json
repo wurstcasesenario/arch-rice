@@ -58,7 +58,7 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "",
+          "label": "󰖩",
           "type": "toggle",
           "active": true,
           "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
@@ -67,7 +67,7 @@
         {
           "label": "",
           "type": "toggle",
-          "active": false,
+          "active": true,
           "command": "rfkill toggle bluetooth",
           "update-command": "sh -c 'rfkill list bluetooth | grep -q \"Soft blocked: no\" && echo true || echo false'"
         },
@@ -75,8 +75,15 @@
           "label": "󰖔",
           "type": "toggle",
           "active": false,
-          "command": "sh -c '~/.config/scripts/nightmode.sh toggle'",
-          "update-command": "sh -c '~/.config/scripts/nightmode.sh status'"
+          "command": "nightmode toggle",
+          "update-command": "nightmode status"
+        },
+        {
+          "label": "󰒘",
+          "type": "toggle",
+          "active": true,
+          "command": "vpnctl toggle",
+          "update-command": "sh -c 'vpnctl status'"
         },
         {
           "label": "",

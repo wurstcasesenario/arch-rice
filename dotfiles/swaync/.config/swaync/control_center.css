@@ -20,7 +20,7 @@
 .control-center {
   background: alpha(@bg0, 0.9); /* fixed @bg0T */
   border-radius: 10px;
-  border: 2px solid @bg0;
+  border: 2px solid @accent;
   margin: 18px;
   padding: 12px;
 }
