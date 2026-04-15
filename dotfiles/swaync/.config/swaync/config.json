@@ -35,6 +35,7 @@
     "dnd",
     "buttons-grid",
     "volume",
+     "backlight" ,
     "title",
     "notifications"
   ],
@@ -69,6 +70,13 @@
           "active": false,
           "command": "rfkill toggle bluetooth",
           "update-command": "sh -c 'rfkill list bluetooth | grep -q \"Soft blocked: no\" && echo true || echo false'"
+        },
+        {
+          "label": "󰖔",
+          "type": "toggle",
+          "active": false,
+          "command": "sh -c '~/.config/scripts/nightmode.sh toggle'",
+          "update-command": "sh -c '~/.config/scripts/nightmode.sh status'"
         },
         {
           "label": "",
