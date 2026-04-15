@@ -55,7 +55,7 @@ check() {
 	local msg=""
 
 	if ! command -v hyprctl >/dev/null 2>&1; then
-		msg+="❌ hyprctl is not installed\n"
+		msg+="hyprctl is not installed\n"
 		((errors++))
 	fi
 	
