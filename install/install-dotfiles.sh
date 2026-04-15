@@ -42,13 +42,13 @@ packages=(
     hypridle
     hyprland
     hyprlock
-    hyprconfig
     hyprpaper
     kitty
     starship
     rofi
     fastfetch
     swaync
+    scripts
     fontconfig
     webapps
     gromitMpx
