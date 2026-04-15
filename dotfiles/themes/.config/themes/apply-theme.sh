@@ -82,8 +82,6 @@ hyprpaper &
 pkill -SIGUSR2 waybar || true
 pkill rofi || true
 pkill nautilus || true
-
-swaync-client --reload-config
-
+pkill swaync || true
 
 echo "Theme $THEME activated"

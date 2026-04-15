@@ -1,5 +1,6 @@
-@import "./swayncColorsNotifications.css";
-@import "./swayncColorsControl.css";
+@import "./control_center.css";
+@import "./notifications.css";
+
 
 .notification-group {
   background: transparent;

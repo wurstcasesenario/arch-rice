@@ -1,0 +1,129 @@
+@import 'swayncColors.css';
+
+* {
+  color: @fg1;
+  all: unset;
+  transition: 200ms;
+}
+
+/* === Rows === */
+.notification-row {
+  outline: none;
+  margin: 0;
+  padding: 0px;
+}
+
+/* === Background container === */
+.floating-notifications.background .notification-row .notification-background {
+  background: alpha(@bg0, 0.9);
+  border: 2px solid alpha(@bg0, 0.9);
+  border-radius: 6px;
+  margin: 16px;
+  padding: 0;
+  transition: background 0.15s ease-in-out;
+}
+
+/* === Notification card === */
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification {
+  border-radius: 10px;
+}
+
+/* === Critical === */
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification.critical {
+  border: 2px solid @red;
+  border-radius: 4px;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification.critical
+.summary {
+  color: @red;
+}
+
+/* === Content === */
+.notification-content {
+  margin: 10px;
+}
+
+.notification > *:last-child > * {
+  min-height: 10px;
+}
+
+/* === Actions === */
+.notification-action {
+  border-radius: 8px;
+  background-color: alpha(@bg0, 0.9);
+  margin: 6px;
+  border: 1px solid transparent;
+  transition: background 0.15s ease-in-out;
+  color: @fg1;
+}
+
+.notification-action:hover {
+  background-color: alpha(@bg2, 0.6);
+  border: 1px solid @accent;
+}
+
+.notification-action:active {
+  background-color: @accent;
+  color: @bg0;
+}
+
+/* === Image === */
+.image {
+  margin: 0px 12px 0px 0px;
+  border-radius: 5px;
+}
+
+/* === Text === */
+.summary {
+  font-family: Ndot55Caps;
+  font-weight: bold;
+  font-size: 18px;
+  color: @fg1;
+  padding-bottom: 3px;
+}
+
+.body {
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: bold;
+  color: @fg2;
+}
+
+/* === Close button === */
+.close-button {
+  margin: 6px;
+  padding: 2px;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: @fg1;
+}
+
+.close-button:hover {
+  background-color: @accent;
+}
+
+.close-button:active {
+  background-color: @accent;
+  color: @bg0;
+}
+
+/* === Progress bars === */
+.notification.critical progress {
+  background-color: @red;
+}
+
+.notification.low progress,
+.notification.normal progress {
+  background-color: @accent;
+}
