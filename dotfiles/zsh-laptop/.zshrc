@@ -51,6 +51,7 @@ alias grep='grep --color=auto'
 alias ff='fastfetch'
 alias ffd='fastfetch --config default'
 alias update='~/arch-rice/install-master.sh --profile laptop'
+alias hello='cowsay -f sus $(date)'
 
 # =========================
 # Settings
