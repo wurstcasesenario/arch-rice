@@ -3,6 +3,7 @@ catppuccin.catppuccin-vsc
 dart-code.dart-code
 dart-code.flutter
 davidanson.vscode-markdownlint
+dsznajder.es7-react-js-snippets
 eamodio.gitlens
 enkia.tokyo-night
 esbenp.prettier-vscode
