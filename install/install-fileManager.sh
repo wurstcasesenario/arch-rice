@@ -2,7 +2,7 @@
 
 echo "=== Installing Filemanager ==="
 
-sudo pacman -S --needed --noconfirm nautilus
+sudo pacman -S --needed --noconfirm nautilus gvfs-smb
 
 # Open Terminal Extension
 yay -S --needed --noconfirm nautilus-open-any-terminal

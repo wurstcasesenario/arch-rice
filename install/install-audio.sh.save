@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "=== Installing Audio Utilities ==="
+
+sudo pacman -S --needed --noconfirm pipewire-alsa pipewire pipewire-pulse wireplumber jack2 \
+pavucontrol pamixer
+
+sudo pacman -S pipewire-alsa pipewire-pulse wireplumber alsa-card-profiles
+
+systemctl --user enable --now pipewire
+systemctl --user enable --now pipewire-pulse
+systemctl --user enable --now wireplumber
+ 

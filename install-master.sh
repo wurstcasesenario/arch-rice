@@ -116,6 +116,7 @@ fi
 cd "$INSTALL_PATH"
 
 scripts=(
+    install-linuxHeaders.sh
     install-stow.sh
     install-tools.sh
     install-drivers.sh
@@ -138,6 +139,7 @@ scripts=(
     install-roblox.sh
     install-print.sh
     install-kicad.sh
+    install-docker.sh
     install-dotfiles.sh
 )
 

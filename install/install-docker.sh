@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "=== Installing Docker ==="
+echo -e "\e[32m=== Installing Docker ===\e[0m"
 
 sudo pacman -S --needed --noconfirm docker docker-compose
 
