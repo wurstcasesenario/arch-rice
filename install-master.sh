@@ -140,6 +140,7 @@ scripts=(
     install-print.sh
     install-kicad.sh
     install-docker.sh
+    install-openRGB.sh
     install-dotfiles.sh
 )
 
