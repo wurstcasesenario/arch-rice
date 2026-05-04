@@ -9,11 +9,13 @@ require_hypridle() {
 }
 
 usage() {
-	echo "Usage:"
-	echo "  idlectl active"
-	echo "  idlectl deactivate"
-	echo "  idlectl toggle"
-	echo "  idlectl status"
+	cat <<'EOF'
+Usage:
+  idlectl activate
+  idlectl deactivate
+  idlectl toggle
+  idlectl status
+EOF
 }
 
 notify() {
@@ -30,12 +32,10 @@ start_idle() {
 
 	if is_running; then
 		echo "hypridle is already running."
-		return
+		return 0
 	fi
 
-	hypridle &
-	disown
-
+	nohup hypridle >/dev/null 2>&1 &
 	echo "hypridle started."
 	notify "Idle" "hypridle activated"
 }
@@ -43,11 +43,10 @@ start_idle() {
 stop_idle() {
 	if ! is_running; then
 		echo "hypridle is not running."
-		return
+		return 0
 	fi
 
 	pkill -x hypridle
-
 	echo "hypridle stopped."
 	notify "Idle" "hypridle deactivated"
 }
@@ -75,7 +74,7 @@ main() {
 	fi
 
 	case "$1" in
-		active)
+		activate)
 			start_idle
 			;;
 		deactivate)

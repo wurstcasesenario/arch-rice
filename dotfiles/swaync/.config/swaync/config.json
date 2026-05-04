@@ -86,7 +86,7 @@
           "update-command": "sh -c 'vpnctl status'"
         },
         {
-          "label": "Idle",
+          "label": "󰖨",
           "type": "toggle",
           "command": "idlectl toggle",
           "update-command": "idlectl status"
