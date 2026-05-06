@@ -90,10 +90,6 @@
           "type": "toggle",
           "command": "idlectl toggle",
           "update-command": "idlectl status"
-        },
-        {
-          "label": "",
-          "command": "hyprlock"
         }
       ]
     }
